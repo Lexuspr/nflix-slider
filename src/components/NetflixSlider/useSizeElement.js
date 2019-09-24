@@ -6,7 +6,7 @@ export default function useSizeElement() {
 
   const refCurrent = elementRef.current;
   useEffect(() => {
-    setWidth(refCurrent.clientWidth);
+    setWidth(elementRef.current.clientWidth);
   }, [refCurrent]);
 
   return { width, elementRef };

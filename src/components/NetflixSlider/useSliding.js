@@ -11,7 +11,7 @@ export default function useSliding(elementWidth, countElements) {
 
   const currentRef = containerRef.current;
   useEffect(() => {
-    const containerWidth = currentRef.clientWidth - PADDING;
+    const containerWidth = containerRef.current.clientWidth - PADDING;
 
     setContainerWidth(containerWidth);
     setTotalInViewport(Math.floor(containerWidth / elementWidth));
